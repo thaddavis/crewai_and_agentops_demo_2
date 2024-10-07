@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 import sys
 from hit_music_only.crew import HitMusicOnlyCrew
+import os
+import agentops
+
+agentops.init(os.getenv("AGENTOPS_API_KEY"))
 
 # This main file is intended to be a way for your to run your
 # crew locally, so refrain from adding necessary logic into this file.
