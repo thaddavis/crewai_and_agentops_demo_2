@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "hit_music_only"
+version = "0.1.0"
+description = "hit_music_only using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.67.1,<1.0.0" }
+
+
+[tool.poetry.scripts]
+hit_music_only = "hit_music_only.main:run"
+run_crew = "hit_music_only.main:run"
+train = "hit_music_only.main:train"
+replay = "hit_music_only.main:replay"
+test = "hit_music_only.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
