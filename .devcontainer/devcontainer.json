@@ -1,0 +1,23 @@
+{
+  "name": "CrewAI + AgentOps (DEMO 2)",
+  "build": {
+    "dockerfile": "../Dockerfile.dev"
+  },
+  "customizations": {
+    "vscode": {
+        "extensions": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "ms-python.black-formatter",
+            "ms-python.debugpy",
+            "ms-azuretools.vscode-docker",
+            "shd101wyy.markdown-preview-enhanced"
+        ],
+        "settings": {}
+    }
+  },
+  "forwardPorts": [],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=delegated",
+  "workspaceFolder": "/code",
+  "runArgs": []
+}
