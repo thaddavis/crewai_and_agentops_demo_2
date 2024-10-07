@@ -12,31 +12,31 @@ class HitMusicOnlyCrew():
 	"""HitMusicOnly crew"""
 
 	@agent
-	def researcher(self) -> Agent:
+	def songwriter(self) -> Agent:
 		return Agent(
-			config=self.agents_config['researcher'],
+			config=self.agents_config['songwriter'],
 			# tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
 			verbose=True
 		)
 
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def producer(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['producer'],
 			verbose=True
 		)
 
 	@task
-	def research_task(self) -> Task:
+	def songwriting(self) -> Task:
 		return Task(
-			config=self.tasks_config['research_task'],
+			config=self.tasks_config['songwriting'],
 		)
 
 	@task
-	def reporting_task(self) -> Task:
+	def producing(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			config=self.tasks_config['producing'],
+			output_file='song.md'
 		)
 
 	@crew
